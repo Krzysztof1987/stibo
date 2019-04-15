@@ -1,0 +1,77 @@
+{
+  "id": "test",
+  "name": "test",
+  "categories": [
+    {
+      "id": "root",
+      "name": "Root",
+      "attributeLinks": [
+        {
+          "id": "stringValue",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "leaf",
+      "name": "Leaf",
+      "parentId": "root",
+      "attributeLinks": [
+        {
+          "id": "compositeValue",
+          "optional": true
+        }
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "id": "stringValue",
+      "name": "String Value",
+      "type": {
+        "id": "string",
+        "multiValue": false
+      },
+      "groupIds": [
+        "all"
+      ]
+    },
+    {
+      "id": "compositeValue",
+      "name": "Composite Value",
+      "description": "Composite Value Description",
+      "type": {
+        "id": "composite",
+        "multiValue": true
+      },
+      "attributeLinks": [
+        {
+          "id": "nestedValue",
+          "optional": false
+        }
+      ],
+      "groupIds": [
+        "all",
+        "complex"
+      ]
+    },
+    {
+      "id": "nestedValue",
+      "name": "Nested Value",
+      "type": {
+        "id": "integer",
+        "multiValue": false
+      }
+    }
+  ],
+  "attributeGroups": [
+    {
+      "id": "all",
+      "name": "All"
+    },
+    {
+      "id": "complex",
+      "name": "Complex"
+    }
+  ]
+}
